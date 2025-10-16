@@ -95,7 +95,7 @@ namespace Neko11V2
 
         private void MovePet(object sender, EventArgs e)
         {
-            CurrentBehavior.MoveAndChooseImage(this, ref dx, ref dy, ref TicksSinceImageChange);
+            CurrentBehavior.Update(this, ref dx, ref dy, ref TicksSinceImageChange);
         }
     }
 }

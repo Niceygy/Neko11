@@ -6,7 +6,7 @@ namespace Neko11V2.behaviors
 {
     class FollowMouse : IBehavior
     {
-        public void ChooseImage(NekoForm form, XDirections xDirection, YDirections yDirection, Flags flag)
+        public void UpdateImage(NekoForm form, XDirections xDirection, YDirections yDirection, Flags flag)
         {
             var images = form.Images;
             string imagename =
@@ -23,7 +23,7 @@ namespace Neko11V2.behaviors
                 : images[$"{imagename}1.ico"];
         }
 
-        public void MoveAndChooseImage(NekoForm form, ref int dx, ref int dy, ref int ticksSinceImageChange)
+        public void Update(NekoForm form, ref int dx, ref int dy, ref int ticksSinceImageChange)
         {
             Point mousePos = Control.MousePosition;
             bool isMoving = false;
@@ -44,7 +44,7 @@ namespace Neko11V2.behaviors
             if (ticksSinceImageChange >= 10)
             {
                 Flags F = isMoving ? Flags.STILL : Flags.MOVING;
-                ChooseImage(form, X, Y, F);
+                UpdateImage(form, X, Y, F);
                 ticksSinceImageChange = 0;
             }
             else

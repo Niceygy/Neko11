@@ -6,7 +6,7 @@ namespace Neko11V2.behaviors
 {
     class RandomMovement : IBehavior
     {
-        public void ChooseImage(NekoForm form, XDirections xDirection, YDirections yDirection, Flags flag)
+        public void UpdateImage(NekoForm form, XDirections xDirection, YDirections yDirection, Flags flag)
         {
             var images = form.Images;
             string imagename =
@@ -18,7 +18,7 @@ namespace Neko11V2.behaviors
                 : images[$"{imagename}1.ico"];
         }
 
-        public void MoveAndChooseImage(NekoForm form, ref int dx, ref int dy, ref int ticksSinceImageChange)
+        public void Update(NekoForm form, ref int dx, ref int dy, ref int ticksSinceImageChange)
         {
             var screen = Screen.PrimaryScreen!.WorkingArea;
             form.Left += dx;
@@ -28,7 +28,7 @@ namespace Neko11V2.behaviors
             {
                 XDirections X = (dx <= 0 ? XDirections.LEFT : XDirections.RIGHT);
                 YDirections Y = (dy <= 0 ? YDirections.UP : YDirections.DOWN);
-                ChooseImage(form, X, Y, Flags.MOVING);
+                UpdateImage(form, X, Y, Flags.MOVING);
                 ticksSinceImageChange = 0;
             }
             else

@@ -14,7 +14,7 @@ namespace Neko11V2.behaviors
         private readonly Random rand = new Random();
         private Point? destination = null;
 
-        public void ChooseImage(NekoForm form, XDirections xDirection, YDirections yDirection, Flags flag)
+        public void UpdateImage(NekoForm form, XDirections xDirection, YDirections yDirection, Flags flag)
         {
             var images = form.Images;
             string imagename =
@@ -34,7 +34,7 @@ namespace Neko11V2.behaviors
                 : images[$"{imagename}1.ico"];
         }
 
-        public void MoveAndChooseImage(NekoForm form, ref int dx, ref int dy, ref int ticksSinceImageChange)
+        public void Update(NekoForm form, ref int dx, ref int dy, ref int ticksSinceImageChange)
         {
             switch (currentActivity)
             {
@@ -139,7 +139,7 @@ namespace Neko11V2.behaviors
 
                     if (ticksSinceImageChange >= NekoForm.ImageUpdateFrequency)
                     {
-                        ChooseImage(form, X, Y, Flags.MOVING);
+                        UpdateImage(form, X, Y, Flags.MOVING);
                         ticksSinceImageChange = 0;    
                     } else
                     {
