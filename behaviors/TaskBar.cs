@@ -11,7 +11,7 @@ namespace Neko11V2.behaviors
 
         public void Update(NekoForm form, ref int dx, ref int dy, ref int ticksSinceImageChange)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

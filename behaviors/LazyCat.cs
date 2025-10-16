@@ -24,9 +24,11 @@ namespace Neko11V2.behaviors
             if (flag == Flags.ASLEEP)
             {
                 imagename = "yawn";
-            } else if (imagename == "" || imagename == String.Empty)
+            }
+            else if (imagename == "" || imagename == String.Empty)
             {
-                imagename = "awake";
+                form.BackgroundImage = images[$"awake.ico"];
+                return;
             }
 
             form.BackgroundImage = form.BackgroundImage == images[$"{imagename}1.ico"]
@@ -93,7 +95,7 @@ namespace Neko11V2.behaviors
             {
                 ticksSinceImageChange++;
             }
-            
+
             if ((SleepUntilTime - DateTime.Now).Seconds <= 0)
             {
                 currentActivity = Flags.MOVING;
@@ -104,9 +106,11 @@ namespace Neko11V2.behaviors
         {
             if (destination == null)
             {
-                var screen = Screen.PrimaryScreen!.WorkingArea;
-                int x = rand.Next(0, screen.Width);
-                int y = rand.Next(0, screen.Height);
+                var screens = Screen.AllScreens;
+                var chosenScreen = screens[rand.Next(screens.Length)];
+                var bounds = chosenScreen.WorkingArea;
+                int x = rand.Next(0, bounds.Width);
+                int y = rand.Next(0, bounds.Height);
                 destination = new Point(x, y);
                 Console.WriteLine($"Navigating to {x}, {y}");
             }
@@ -140,12 +144,13 @@ namespace Neko11V2.behaviors
                     if (ticksSinceImageChange >= NekoForm.ImageUpdateFrequency)
                     {
                         UpdateImage(form, X, Y, Flags.MOVING);
-                        ticksSinceImageChange = 0;    
-                    } else
+                        ticksSinceImageChange = 0;
+                    }
+                    else
                     {
                         ticksSinceImageChange++;
                     }
-                    
+
                 }
             }
         }
