@@ -11,14 +11,15 @@ namespace Neko11V2
     {
         private readonly System.Windows.Forms.Timer timer;
         private int dx = 2, dy = 2; // movement speed
+        public const int ImageUpdateFrequency = 10;
 
-        public readonly Dictionary<string, System.Drawing.Image> Images = NImages.LoadImages();
-        public readonly List<IBehavior> behaviors = [new FollowMouse(), new RandomMovement()];
+        public readonly Dictionary<string, Image> Images = NImages.LoadImages();
+        public readonly List<IBehavior> behaviors = [new FollowMouse(), new RandomMovement(), new LazyCat()];
         public int CurrentBehaviorPos = 0;
 
         private int TicksSinceImageChange = 0;
         private readonly NotifyIcon TrayIcon;
-        private IBehavior CurrentBehavior = new FollowMouse();
+        private IBehavior CurrentBehavior = new LazyCat();
 
         public NekoForm()
         {

@@ -24,7 +24,7 @@ namespace Neko11V2.behaviors
             form.Left += dx;
             form.Top += dy;
 
-            if (ticksSinceImageChange >= 10)
+            if (ticksSinceImageChange >= NekoForm.ImageUpdateFrequency)
             {
                 XDirections X = (dx <= 0 ? XDirections.LEFT : XDirections.RIGHT);
                 YDirections Y = (dy <= 0 ? YDirections.UP : YDirections.DOWN);

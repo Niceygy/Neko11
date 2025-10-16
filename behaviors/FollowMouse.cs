@@ -33,9 +33,11 @@ namespace Neko11V2.behaviors
             dx = Math.Abs(mousePos.X - form.Left) > 20 ? (mousePos.X > form.Left ? speed : -speed) : 0;
             dy = Math.Abs(mousePos.Y - form.Top) > 20 ? (mousePos.Y > form.Top ? speed : -speed) : 0;
 
+            //update to new location, if it has changed
             if (dx != 0 || dy != 0)
                 form.Location = new Point(form.Location.X + dx, form.Location.Y + dy);
 
+            //what direction are we moving in?
             XDirections X = dx == 0 ? XDirections.NOT : (dx > 0 ? XDirections.RIGHT : XDirections.LEFT);
             YDirections Y = dy == 0 ? YDirections.NOT : (dy > 0 ? YDirections.DOWN : YDirections.UP);
 
