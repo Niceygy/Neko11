@@ -18,12 +18,15 @@ namespace Neko11V2.behaviors
         {
             var images = form.Images;
             string imagename =
-                (yDirection == YDirections.UP ? "up" : "down") +
-                (xDirection == XDirections.LEFT ? "left" : "right");
+                (yDirection == YDirections.NOT ? "" : (yDirection == YDirections.UP ? "up" : "down")) +
+                (xDirection == XDirections.NOT ? "" : (xDirection == XDirections.LEFT ? "left" : "right"));
 
             if (flag == Flags.ASLEEP)
             {
                 imagename = "yawn";
+            } else if (imagename == "" || imagename == String.Empty)
+            {
+                imagename = "awake";
             }
 
             form.BackgroundImage = form.BackgroundImage == images[$"{imagename}1.ico"]
@@ -61,6 +64,7 @@ namespace Neko11V2.behaviors
                     {
                         currentActivity = Flags.ASLEEP;
                         SleepUntilTime = DateTime.Now.AddMinutes(rand.Next(1, 4)); // Sleep 1-3 minutes
+                        Console.WriteLine($"SleepUntilTime = {SleepUntilTime:t}");
                         form.BackgroundImage = form.Images["yawn1.ico"];
                         return;
                     }
@@ -104,6 +108,7 @@ namespace Neko11V2.behaviors
                 int x = rand.Next(0, screen.Width);
                 int y = rand.Next(0, screen.Height);
                 destination = new Point(x, y);
+                Console.WriteLine($"Navigating to {x}, {y}");
             }
             else
             {
@@ -111,11 +116,15 @@ namespace Neko11V2.behaviors
                 dx = Math.Abs(destination!.Value.X - form.Left) > 20 ? (destination!.Value.X > form.Left ? speed : -speed) : 0;
                 dy = Math.Abs(destination!.Value.Y - form.Top) > 20 ? (destination!.Value.Y > form.Top ? speed : -speed) : 0;
 
+                int xDist = Math.Abs(form.Location.X - destination!.Value.X);
+                int yDist = Math.Abs(form.Location.Y - destination!.Value.Y);
+
+
                 //update to new location, if it has changed
                 if (dx != 0 || dy != 0)
                     form.Location = new Point(form.Location.X + dx, form.Location.Y + dy);
 
-                if (dx < 20 && dy < 20)
+                if (xDist < 20 && yDist < 20)
                 {
                     destination = null;
                     currentActivity = Flags.STILL;
@@ -127,7 +136,16 @@ namespace Neko11V2.behaviors
                     //what direction are we moving in?
                     XDirections X = dx == 0 ? XDirections.NOT : (dx > 0 ? XDirections.RIGHT : XDirections.LEFT);
                     YDirections Y = dy == 0 ? YDirections.NOT : (dy > 0 ? YDirections.DOWN : YDirections.UP);
-                    ChooseImage(form, X, Y, Flags.MOVING);
+
+                    if (ticksSinceImageChange >= NekoForm.ImageUpdateFrequency)
+                    {
+                        ChooseImage(form, X, Y, Flags.MOVING);
+                        ticksSinceImageChange = 0;    
+                    } else
+                    {
+                        ticksSinceImageChange++;
+                    }
+                    
                 }
             }
         }

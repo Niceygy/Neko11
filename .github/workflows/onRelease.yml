@@ -1,0 +1,29 @@
+name: Build and Upload Windows Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Build project
+        run: dotnet publish -c Release -r win-x64 --self-contained true -o ./publish
+
+      - name: Upload exe to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ./publish/*.exe
+
+    #   - name: Sign executable
+    #     run: |
+    #       "C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x64\signtool.exe" sign /fd SHA256 /a /tr http://timestamp.digicert.com /td SHA256 /f ${{ secrets.CERTIFICATE_FILE }} /p ${{ secrets.CERTIFICATE_PASSWORD }} ./publish/*.exe
