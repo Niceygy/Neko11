@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nicey\\Code\\Personal\\Neko11V2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{78F948D7-0ACF-4850-81BF-623AC8263CB3}|Neko11V2.csproj|c:\\users\\nicey\\code\\personal\\neko11v2\\behaviors\\lazycat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78F948D7-0ACF-4850-81BF-623AC8263CB3}|Neko11V2.csproj|solutionrelative:behaviors\\lazycat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78F948D7-0ACF-4850-81BF-623AC8263CB3}|Neko11V2.csproj|c:\\users\\nicey\\code\\personal\\neko11v2\\nimages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78F948D7-0ACF-4850-81BF-623AC8263CB3}|Neko11V2.csproj|solutionrelative:nimages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78F948D7-0ACF-4850-81BF-623AC8263CB3}|Neko11V2.csproj|c:\\users\\nicey\\code\\personal\\neko11v2\\nekoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78F948D7-0ACF-4850-81BF-623AC8263CB3}|Neko11V2.csproj|solutionrelative:nekoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78F948D7-0ACF-4850-81BF-623AC8263CB3}|Neko11V2.csproj|c:\\users\\nicey\\code\\personal\\neko11v2\\behaviors\\reusable\\ibehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78F948D7-0ACF-4850-81BF-623AC8263CB3}|Neko11V2.csproj|solutionrelative:behaviors\\reusable\\ibehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78F948D7-0ACF-4850-81BF-623AC8263CB3}|Neko11V2.csproj|c:\\users\\nicey\\code\\personal\\neko11v2\\behaviors\\reusable\\edirections.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78F948D7-0ACF-4850-81BF-623AC8263CB3}|Neko11V2.csproj|solutionrelative:behaviors\\reusable\\edirections.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78F948D7-0ACF-4850-81BF-623AC8263CB3}|Neko11V2.csproj|c:\\users\\nicey\\code\\personal\\neko11v2\\nekoform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78F948D7-0ACF-4850-81BF-623AC8263CB3}|Neko11V2.csproj|solutionrelative:nekoform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 206,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NImages.cs",
+              "DocumentMoniker": "C:\\Users\\nicey\\Code\\Personal\\Neko11V2\\NImages.cs",
+              "RelativeDocumentMoniker": "NImages.cs",
+              "ToolTip": "C:\\Users\\nicey\\Code\\Personal\\Neko11V2\\NImages.cs",
+              "RelativeToolTip": "NImages.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T08:54:00.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LazyCat.cs",
+              "DocumentMoniker": "C:\\Users\\nicey\\Code\\Personal\\Neko11V2\\behaviors\\LazyCat.cs",
+              "RelativeDocumentMoniker": "behaviors\\LazyCat.cs",
+              "ToolTip": "C:\\Users\\nicey\\Code\\Personal\\Neko11V2\\behaviors\\LazyCat.cs",
+              "RelativeToolTip": "behaviors\\LazyCat.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAC0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T08:52:10.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EDirections.cs",
+              "DocumentMoniker": "C:\\Users\\nicey\\Code\\Personal\\Neko11V2\\behaviors\\reusable\\EDirections.cs",
+              "RelativeDocumentMoniker": "behaviors\\reusable\\EDirections.cs",
+              "ToolTip": "C:\\Users\\nicey\\Code\\Personal\\Neko11V2\\behaviors\\reusable\\EDirections.cs",
+              "RelativeToolTip": "behaviors\\reusable\\EDirections.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T08:49:42.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IBehavior.cs",
+              "DocumentMoniker": "C:\\Users\\nicey\\Code\\Personal\\Neko11V2\\behaviors\\reusable\\IBehavior.cs",
+              "RelativeDocumentMoniker": "behaviors\\reusable\\IBehavior.cs",
+              "ToolTip": "C:\\Users\\nicey\\Code\\Personal\\Neko11V2\\behaviors\\reusable\\IBehavior.cs",
+              "RelativeToolTip": "behaviors\\reusable\\IBehavior.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T08:44:22.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NekoForm.cs",
+              "DocumentMoniker": "C:\\Users\\nicey\\Code\\Personal\\Neko11V2\\NekoForm.cs",
+              "RelativeDocumentMoniker": "NekoForm.cs",
+              "ToolTip": "C:\\Users\\nicey\\Code\\Personal\\Neko11V2\\NekoForm.cs",
+              "RelativeToolTip": "NekoForm.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAASwDMAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T08:14:16.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NekoForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\nicey\\Code\\Personal\\Neko11V2\\NekoForm.Designer.cs",
+              "RelativeDocumentMoniker": "NekoForm.Designer.cs",
+              "ToolTip": "C:\\Users\\nicey\\Code\\Personal\\Neko11V2\\NekoForm.Designer.cs",
+              "RelativeToolTip": "NekoForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T07:58:50.806Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
